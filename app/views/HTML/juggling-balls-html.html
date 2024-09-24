@@ -1,0 +1,82 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form class="form" action="/HTML/juggling-trick-html" method="post">
+            <!--RADIO GROUP-->
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <h1 class="govuk-fieldset__heading">
+                            How many balls can you juggle?
+                        </h1>
+                    </legend>
+                    <div class="govuk-radios" data-module="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="how-many-balls" name="how-many-balls" type="radio" value="3 or more">
+                            <label class="govuk-label govuk-radios__label" for="how-many-balls">
+                                3 or more
+                            </label>
+                          </div>
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="how-many-ballse-2" name="how-many-balls" type="radio" value="1 or 2">
+                            <label class="govuk-label govuk-radios__label" for="how-many-balls-2">
+                                1 or 2
+                            </label>
+                          </div>
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="how-many-balls-3" name="how-many-balls" type="radio" value="None - I cannot juggle">
+                            <label class="govuk-label govuk-radios__label" for="how-many-balls-3">
+                                None - I cannot juggle
+                            </label>
+                          </div>
+
+
+
+                        <!--<div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="how-many-balls" name="3 or more" type="radio"
+                                value="3 or more">
+                            <label class="govuk-label govuk-radios__label" for="how-many-balls">
+                                3 or more
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="how-many-balls-2" name="1 or 2" type="radio"
+                                value="1 or 2">
+                            <label class="govuk-label govuk-radios__label" for="how-many-balls-2">
+                                1 or 2
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="how-many-balls-3" name="None - I cannot juggle" type="radio"
+                                value="none">
+                            <label class="govuk-label govuk-radios__label" for="how-many-balls-3">
+                                None - I cannot juggle
+                            </label>
+                        </div>-->
+                     
+                    </div>
+                </fieldset>
+                </div>
+
+
+                <!--NUNJUCK CODE FOR START BUTTON-->
+                {{ govukButton({
+                text: "Continue"
+                }) }}
+        </form>
+    </div>
+</div>
+{% endblock %}
