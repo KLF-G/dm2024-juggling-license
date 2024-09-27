@@ -1,0 +1,34 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName = 'Your email address' %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form>
+            <!--THIS IS JUST TELLING THE CODE THE PATH AND FOLDER ITS IN - so should store and flow only in this folder--->
+            {{ govukInput({
+            id: "[new][email-address]",
+            name: "[new][email-address]",
+            label: {
+            text: pageName,
+            isPageHeading: true,
+            classes: "govuk-label--l"
+            },
+            hint: {
+            text: "Type the email you wish to get emailed from"
+            },
+            type: "email",
+            autocomplete: "email",
+            spellcheck: false,
+            value: data.new.emailAddress
+            }) }}
+
+            {{ govukButton({
+                text: "Continue"
+              }) }}
+        </form>
+    
+    </div>
+</div>
+{% endblock %}
